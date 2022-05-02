@@ -4,6 +4,15 @@
   --color-white: #ffffff;
   --color-light-white: #eeeeee;
   --color-dark-white: #bdbdbd;
+  --color-blue: #61a5c2;
+  --color-light-blue: #a9d6e5;
+  --color-dark-blue: #2a6f97;
+  --color-dark-grey: #4d4d4d;
+  --color-grey: #616161;
+  --color-light-grey: #7c7979;
+  --color-yellow: #fff1e6;
+  --color-beige: #faedcd;
+  --color-black: #000000;
 
   /* font size */
   --font-large: 48px;
@@ -11,7 +20,16 @@
   --font-regular: 18px;
   --font-small: 16px;
   --font-micro: 14px;
+
   /* font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
 
   /* size */
+}
+
+/* universal tags */
+* {
+  box-sizing: border-box;
 }
