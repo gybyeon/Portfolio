@@ -11,7 +11,7 @@
   --color-grey: #616161;
   --color-light-grey: #7c7979;
   --color-yellow: #fff1e6;
-  --color-beige: #faedcd;
+  --color-beige: #ebebe4;
   --color-black: #000000;
 
   /* font size */
@@ -46,6 +46,11 @@ a {
 ul {
   list-style: none;
   padding: 0;
+}
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
 }
 
 /* typography */
@@ -96,9 +101,42 @@ p {
   cursor: pointer;
 }
 .navbar_menu_item.active {
-  border-bottom: 2px solid var(--color-light-white);
+  color: var(--color-white);
+  border-bottom: 1px solid var(--color-white);
 }
 .navbar_menu_item:hover {
-  color: var(--color-light-blue);
-  border-bottom: 1px solid var(--color-light-blue);
+  color: var(--color-dark-blue);
+  border-bottom: 1px solid var(--color-dark-blue);
 }
+
+/* Home */
+#home {
+  background-color: var(--color-blue);
+  padding: 40px;
+  text-align: center;
+}
+.home_avatar {
+  width: 200px;
+  height: 200px;
+  border: 2px solid var(--color-beige);
+  border-radius: 50%;
+}
+.home_title,
+.home_description {
+  color: var(--color-white);
+}
+.home_contact {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  color: var(--color-beige);
+  border: 3px solid var(--color-beige);
+  border-radius: var(--size-border-radius);
+  margin-top: 20px;
+  padding: 5px;
+}
+.home_contact:hover {
+  background-color: var(--color-beige);
+  color: var(--color-dark-blue);
+  border: 3px solid var(--color-dark-blue);
+}
+
