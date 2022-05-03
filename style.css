@@ -28,6 +28,9 @@
 
   /* size */
   --size-border-radius: 4px;
+
+  /* animation */
+  --animation-duration: 300ms;
 }
 
 /* universal tags */
@@ -57,8 +60,11 @@ button {
 .section {
   padding: 50px;
   text-align: center;
-  max-width: 1200px;
   min-width: 767px;
+  margin: auto;
+}
+.section_container {
+  max-width: 1200px;
   margin: auto;
 }
 
@@ -150,7 +156,6 @@ p {
 }
 
 /* About */
-
 .about_introduces {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -159,13 +164,15 @@ p {
 }
 .introduce {
   display: flex;
+  align-items: center;
   text-align: start;
   margin: 0 60px;
 }
 .introduce_icon {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   font-size: 40px;
+  line-height: 80px;
   color: var(--color-grey);
 }
 .introduce_item_title {
@@ -179,3 +186,14 @@ p {
 }
 
 /* skills */
+#skills {
+  background: var(--color-dark-blue);
+}
+.section_container > h1 {
+  color: var(--color-beige);
+}
+.skill_list {
+  background: var(--color-beige);
+  border: 1px solid transparent;
+  border-radius: var(--size-border-radius);
+}
