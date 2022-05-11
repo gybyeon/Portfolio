@@ -7,3 +7,9 @@ window.addEventListener("scroll", () => {
     ? (navbar.style.background = "var(--color-blue)")
     : (navbar.style.background = "transparent");
 });
+
+// scroll to each secntion when the button is clicked
+const menuItem = document.querySelector(".navbar_menu_item");
+menuItem.addEventListener("click", (e) => {
+  e.target.scrollIntoView({ behavior: "smooth" });
+});
