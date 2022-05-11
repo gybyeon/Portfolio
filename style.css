@@ -95,12 +95,20 @@ p {
 
 /* Navbar */
 #navbar {
+  position: fixed;
+  width: 100%;
+  transition: top -0.5s;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--color-blue);
+  background-color: transparent;
   color: var(--color-white);
   padding: 5px 20px;
+  height: 60px;
+  transition: all var(--animation-duration) ease-in-out;
+}
+.navbar_fixed {
+  background-color: var(--color-blue);
 }
 .navbar_logo {
   font-size: var(--font-regular);
@@ -145,6 +153,7 @@ p {
   background: var(--color-blue) center/cover;
   text-align: center;
   padding: 40px;
+  padding-top: 100px;
 }
 .home_avatar {
   width: 200px;
