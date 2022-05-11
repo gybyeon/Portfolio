@@ -157,6 +157,9 @@ p {
   padding: 40px;
   padding-top: 100px;
 }
+.home_container {
+  transition: opacity linear;
+}
 .home_avatar {
   width: 200px;
   height: 200px;
