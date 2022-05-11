@@ -12,8 +12,18 @@ window.addEventListener("scroll", () => {
 const menu = document.querySelector(".navbar_menu");
 const menuItem = document.querySelector(".navbar_menu_item");
 menu.addEventListener("click", (e) => {
-  const LINK = e.target.dataset.link;
-  const target = document.querySelector(`${LINK}`); // data-set안에 정의한 변수들이 할당
+  const LINK = e.target.dataset.link; // data-set안에 정의한 변수들이 할당
   if (LINK === null) return;
-  target.scrollIntoView({ behavior: "smooth" });
+  SCROLLINTOVIEW(LINK);
 });
+
+// Handle click on "contact me" button on home
+const homeContactBtn = document.querySelector(".home_contact");
+homeContactBtn.addEventListener("click", () => {
+  SCROLLINTOVIEW("#contact");
+});
+
+function SCROLLINTOVIEW(selector) {
+  const scrollto = document.querySelector(selector);
+  scrollto.scrollIntoView({ behavior: "smooth" });
+}
