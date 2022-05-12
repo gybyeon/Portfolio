@@ -131,7 +131,7 @@ p {
   cursor: pointer;
   border: 1px solid transparent;
 }
-.navbar_menu_item.active {
+.navbar_menu_item.selected {
   border: 1px solid var(--color-white);
   border-radius: var(--size-border-radius);
 }
@@ -261,11 +261,11 @@ p {
   font-size: var(--font-small);
 }
 .category_btn:hover,
-.category_btn.active {
+.category_btn.selected {
   color: var(--color-white);
   background-color: var(--color-blue);
 }
-.category_btn.active .category_count,
+.category_btn.selected .category_count,
 .category_btn:hover .category_count {
   opacity: 1;
   top: 0;
@@ -332,17 +332,18 @@ p {
   transition: all var(--animation-duration) ease-in;
 }
 .project_description > h3 {
-  color: var(--color-white);
+  color: var(--color-light-blue);
 }
 .project_description > h3::after {
   content: "";
   display: block;
-  width: 25px;
+  width: 50%;
   height: 2px;
+  transform: translateX(-50%);
   background-color: var(--color-dark-white);
   position: relative;
   left: 50%;
-  margin-left: -12px;
+
   margin-top: 8px;
 }
 
@@ -399,9 +400,14 @@ p {
     flex-direction: column;
     text-align: center;
     position: absolute;
-    top: 25px;
-    right: 25px;
+    top: 40px;
+    right: 0;
+    width: 100%;
     display: none;
+    background-color: var(--color-blue);
+  }
+  .navbar_menu.open {
+    display: block;
   }
   .about_introduces {
     display: flex;

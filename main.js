@@ -10,11 +10,18 @@ window.addEventListener("scroll", () => {
 
 // Handle scrolling when tapping on the navbar menu
 const menu = document.querySelector(".navbar_menu");
-const menuItem = document.querySelector(".navbar_menu_item");
+const menuItems = document.querySelectorAll(".navbar_menu_item");
 menu.addEventListener("click", (e) => {
   const LINK = e.target.dataset.link; // data-set안에 정의한 변수들이 할당
   if (LINK === null) return;
+  menu.classList.remove("open");
   SCROLL_INTO_VIEW(LINK);
+});
+
+// Navbar toggle button for small screen
+const navbarToggleBtn = document.querySelector(".navbar_toggle_btn");
+navbarToggleBtn.addEventListener("click", () => {
+  menu.classList.toggle("open");
 });
 
 // Handle click on "contact me" button on home
@@ -59,6 +66,14 @@ workBtnList.addEventListener("click", (e) => {
         : project.classList.add("invisible");
     });
   }, 400);
+
+  // Remove selection from the previous item and select the new one
+  const workBtns = document.querySelectorAll(".category_btn");
+  workBtns.forEach((btn) => {
+    btn !== e.target
+      ? btn.classList.remove("selected")
+      : e.target.classList.add("selected");
+  });
 });
 
 function SCROLL_INTO_VIEW(selector) {
