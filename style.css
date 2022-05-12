@@ -225,7 +225,7 @@ p {
 .skillset {
   background-color: var(--color-beige);
   color: var(--color-dark-grey);
-  width: 60%;
+  width: 600px;
   margin: auto;
   border: 1px solid transparent;
   border-radius: var(--size-border-radius);
@@ -409,14 +409,27 @@ p {
   .navbar_menu.open {
     display: block;
   }
+  .home_title {
+    font-size: var(--font-medium);
+  }
+  .home_description {
+    font-size: var(--font-regular);
+  }
   .about_introduces {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
+  }
+  .introduce {
+    width: 100%;
+    margin: 0;
   }
   .project {
     flex-grow: 1;
     margin: 8px 0;
+  }
+  .skillset {
+    width: 100%;
   }
 }
