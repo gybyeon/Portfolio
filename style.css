@@ -434,11 +434,7 @@ p {
     width: 100%;
   }
   .arrow-up {
-    right: 15px;
-    bottom: 15px;
-    width: 30px;
-    font-size: 20px;
-    height: 30px;
-    border-radius: 50%;
+    bottom: 25px;
+    right: 25px;
   }
 }
