@@ -289,6 +289,12 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  opacity: 1;
+}
+.work_projects.animation_out {
+  opacity: 0;
+  transition: all var(--animation-duration) ease-out;
+  transform: transition scale(0.96) translateY(40px);
 }
 .project {
   width: 300px;
@@ -299,6 +305,9 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.project.invisible {
+  display: none;
 }
 .project_img {
   max-width: 100%;

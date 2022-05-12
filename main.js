@@ -14,13 +14,13 @@ const menuItem = document.querySelector(".navbar_menu_item");
 menu.addEventListener("click", (e) => {
   const LINK = e.target.dataset.link; // data-set안에 정의한 변수들이 할당
   if (LINK === null) return;
-  SCROLLINTOVIEW(LINK);
+  SCROLL_INTO_VIEW(LINK);
 });
 
 // Handle click on "contact me" button on home
 const homeContactBtn = document.querySelector(".home_contact");
 homeContactBtn.addEventListener("click", () => {
-  SCROLLINTOVIEW("#contact");
+  SCROLL_INTO_VIEW("#contact");
 });
 
 // Make home slowly fade to transparent when scrolling down
@@ -38,10 +38,30 @@ document.addEventListener("scroll", () => {
 
 // Handle click on the arrop-up button
 arrowUpBtn.addEventListener("click", () => {
-  SCROLLINTOVIEW("#home");
+  SCROLL_INTO_VIEW("#home");
 });
 
-function SCROLLINTOVIEW(selector) {
+// Projects
+const workBtnList = document.querySelector(".work_categories");
+const projectContainer = document.querySelector(".work_projects");
+const projects = document.querySelectorAll(".project");
+workBtnList.addEventListener("click", (e) => {
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+  if (filter === null) {
+    return;
+  }
+  projectContainer.classList.add("animation_out");
+  setTimeout(() => {
+    projectContainer.classList.remove("animation_out");
+    projects.forEach((project) => {
+      filter === "*" || filter === project.dataset.type
+        ? project.classList.remove("invisible")
+        : project.classList.add("invisible");
+    });
+  }, 400);
+});
+
+function SCROLL_INTO_VIEW(selector) {
   const scrollto = document.querySelector(selector);
   scrollto.scrollIntoView({ behavior: "smooth" });
 }
