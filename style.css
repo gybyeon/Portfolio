@@ -395,6 +395,7 @@ p {
 @media screen and (max-width: 768px) {
   .navbar_toggle_btn {
     display: block;
+    right: 15px;
   }
   .navbar_menu {
     flex-direction: column;
@@ -418,7 +419,7 @@ p {
   .about_introduces {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
   }
   .introduce {
@@ -435,5 +436,8 @@ p {
   .arrow-up {
     right: 15px;
     bottom: 15px;
+    width: 30px;
+    font-size: 20px;
+    height: 30px;
   }
 }
