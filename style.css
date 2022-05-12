@@ -432,4 +432,8 @@ p {
   .skillset {
     width: 100%;
   }
+  .arrow-up {
+    right: 15px;
+    bottom: 15px;
+  }
 }
